@@ -1,0 +1,12 @@
+{
+  "name": "jquery-gather",
+  "homepage": "https://github.com/oo7ph/jquery-gather",
+  "_release": "2c1c7043b8",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "2c1c7043b8e456e33aa8a6478fa82c9c330f956f"
+  },
+  "_source": "git://github.com/oo7ph/jquery-gather.git",
+  "_target": "*"
+}

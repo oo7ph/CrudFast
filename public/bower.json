@@ -1,0 +1,20 @@
+{
+  "name": "CrudFast",
+  "version": "0.0.0",
+  "main": "public/index.php",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "git://github.com/documentcloud/backbone.git#~1.0.0",
+    "bootstrap": "git://github.com/twbs/bootstrap.git#~3.0.0-rc1",
+    "creatable": "git://github.com/metaraine/creatable.git",
+    "jquery-gather": "git://github.com/oo7ph/jquery-gather.git",
+    "labjs": "git://github.com/getify/LABjs.git",
+    "underscore-prototype": "git://github.com/oo7ph/underscore-prototype.git"
+  }
+}

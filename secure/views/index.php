@@ -5,14 +5,15 @@
     <title>App Name</title>
     
     <!-- Bootstrap -->
-    <link href="style/bootstrap.min.css" rel="stylesheet">
-    <link href="style/bootstrap-responsive.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
   </head>
   <body>
-	<script src="scripts/lib/LAB.min.js"></script>
+	<script src="scripts/lib/labjs/LAB.min.js"></script>
 	<script>
+
+	// Scripts folder
 	
 	//Name Spaces
 		var App = {
@@ -25,20 +26,14 @@
 		
 	// Libs
 		$LAB
-			.script('scripts/lib/rjs.js')
-			.script('scripts/lib/rjformat.js')
-			.script('scripts/lib/jquery-1.8.2.min.js')
-			.script('scripts/lib/jquery-ui-1.8.16.custom.min.js')
-			.script('scripts/lib/jquery.gather.js')
-			.script('scripts/lib/underscore-min.js')
-			.script('scripts/lib/underscore-functional.js')
-			.script('scripts/lib/underscore-proto.js')
-			.script('scripts/lib/backbone-min.js')
-			.script('scripts/lib/creatable.js')
-			.script('scripts/lib/creatable.backbone.js')
-			.script('scripts/lib/creatable.render.js')
-			.script('scripts/lib/creatable-array-ext.1.0.js')
-			.script('scripts/lib/bootstrap.min.js')
+			.script('bower_components/jquery/jquery.min.js')
+			.script('bower_components/underscore/underscore-min.js')
+			.script('bower_components/backbone/backbone-min.js')
+			.script('bower_components/bootstrap/dist/js/bootstrap.min.js')
+			.script('bower_components/creatable/creatable.js')
+			.script('bower_components/creatable/creatable.backbone.js')
+			.script('bower_components/jquery-gather/jquery-gather.js')
+			.script('bower_components/underscore-prototype/underscore-proto.js')
 			
 			
 	// Views

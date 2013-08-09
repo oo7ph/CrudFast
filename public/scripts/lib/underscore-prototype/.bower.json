@@ -1,0 +1,13 @@
+{
+  "name": "underscore-prototype",
+  "homepage": "https://github.com/oo7ph/underscore-prototype",
+  "_release": "df3aa04fce",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "df3aa04fcea6ffdeeacbd9a7582e5609621c367c"
+  },
+  "_source": "git://github.com/oo7ph/underscore-prototype.git",
+  "_target": "*",
+  "_direct": true
+}
