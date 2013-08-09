@@ -9,38 +9,30 @@ set_include_path(get_include_path() . PATH_SEPARATOR . "../secure/libs");
 set_include_path(get_include_path() . PATH_SEPARATOR . "../secure/models");
 require_once 'Slim/Slim.php';
 require_once 'idiorm.php';
+require_once '../secure/config.php';
 \Slim\Slim::registerAutoloader();
 
-// Setup DB
-ORM::configure('mysql:host=localhost;dbname=testBlog');
-ORM::configure('username', 'root');
-ORM::configure('password', 'root');
 
+// Setup DB
+ORM::configure('mysql:host='.DATABASE_SERVER.';port='.DATABASE_PORT.';dbname='.DATABASE_NAME);
+ORM::configure('username', DATABASE_USER);
+ORM::configure('password', DATABASE_PASS);
+
+\Slim\Route::setDefaultConditions(array(
+  'id' => '[0-9]*',
+  'parentId' => '[0-9]{1,}'
+));
 
 $app = new \Slim\Slim(array(
 	'templates.path' => '../secure/Views',
 	'cookies.secret_key' => 'IkMHwZssJVe7XgdznBby'
 ));
-$app->get('/', function () use($app) {
-    $app->render("index.php");
-});
 
-$app->get('/posts', function () use($app) {
-    $posts = ORM::for_table('posts')
-	->find_many(true);
+// AutoLoad Controller Routes
+foreach (glob("../secure/controllers/*.php") as $filename)
+{
+    require_once $filename;
+}
 
-    $app->response()->header('Content-Type', 'application/json');
-    echo json_encode($posts);
-	
-});
-
-$app->post('/posts', function () use($app) {
-	
-	$params = (array) json_decode($app->request()->getBody());
-	
-    $post = ORM::for_table('posts')->create($params);
-	$post->save();
-	
-});
 
 $app->run();
